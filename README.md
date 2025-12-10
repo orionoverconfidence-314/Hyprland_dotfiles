@@ -24,7 +24,7 @@ _____
 
 ## Wlogout
 ___
-![alt text](images/2025-12-10-192839_hyprshot.png)
+![alt text](images/image21.png)
 
 A clean and minimal wlogout menu that matches the rest of the desktop theme.
 _____
