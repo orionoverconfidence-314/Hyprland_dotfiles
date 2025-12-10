@@ -1,7 +1,7 @@
 # Hyprland_dotfiles
 Custom dotfiles for my Arch Linux + Hyprland setup.
 
-## Basic wallpaper (Hyprpaper)
+## Wallpaper System (Hyprpaper)
 
 ----
 ![alt text](images/image.png)
