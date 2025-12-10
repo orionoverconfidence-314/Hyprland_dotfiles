@@ -1,0 +1,128 @@
+configuration {
+	modi: "drun";
+	font: "Rubik 10";
+	show-icons: true;
+	icon-theme: "Reversal-dark";
+	display-drun: "";
+	drun-display-format: "{icon}{name}";
+	sidebar-mode: false;
+
+}
+
+@import "wallpaper-theme" * {
+	fg: rgb(255, 255, 255);
+
+	background-color: transparent;
+	text-color: @fg;
+	border-color:white;
+	border-radius:20;
+}
+
+window {
+	width: 683px;
+	height: 384px;
+
+}
+
+prompt {
+	background-color: transparent;
+	enabled: true;
+	padding: 0.5% 32px 0% -0.5%;
+	font: "Rubik 10";
+}
+
+entry {
+	placeholder: "Search";
+	place:1px;
+	text-color:@textcolor;                 //color change
+	background-color: transparent;
+	placeholder-color: @fg;
+	expand: true;
+	padding: 0.15% 0% 0% 0%;
+	
+}
+
+inputbar {
+	children:
+		[ prompt,
+		entry];
+	expand: false;
+	border-radius: 10px 10px 10px 10px;
+	margin: 0%;
+	padding: 10px 10px 10px 10px;
+	background-color: @inputback;           //color change
+
+}
+
+listview {
+	border:0;
+	columns: 6;
+	lines: 3;
+	cycle: true;
+	dynamic: true;
+	layout: vertical;
+	background-color:@listback;                //color change
+	
+}
+
+mainbox {
+	children:
+		[ inputbar,
+		listview];
+	spacing: 2%;
+	padding: 2% 1% 2% 1%;
+}
+
+element {
+	orientation: vertical;
+	padding: 5px 0px 5px 0px;
+	
+}
+
+element-icon {
+	size: 100px;
+	horizontal-align: 0.5;
+}
+
+element-text {
+	expand: true;
+	
+	horizontal-align: 0.5;
+	vertical-align: 0.5;
+	margin: 0.5% 0.5% -0.5% 0.5%;
+}
+
+element-text,
+element-icon {
+	background-color: transparent;
+	text-color: @textcolor;          //color of text in list
+}
+
+element selected {
+	border-radius: 6px;
+	
+}
+
+//the black box over the hovered element
+element selected  normal {
+    background-color: @select;                  //color of select
+}
+
+
+element normal.normal {
+	background-color: transparent;
+	text-color: @fg-color;
+}
+
+element alternate.normal {
+	background-color: transparent;
+	text-color: @fg-color;
+}
+
+scrollbar {
+    width:        0px ;
+    border:       0;
+    handle-color: transparent;
+    handle-width: 0px ;
+    padding:      0;
+}

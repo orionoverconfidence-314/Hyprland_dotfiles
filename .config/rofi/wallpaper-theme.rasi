@@ -1,0 +1,9 @@
+window {
+    background-image: url("/home/orion_siva/Pictures/wallpaper/chess1.png");
+}
+*{
+    textcolor: black;
+    inputback: white/30%;
+    listback: white/30%;
+    select: black/30%;
+}

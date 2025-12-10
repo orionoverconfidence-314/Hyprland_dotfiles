@@ -1,0 +1,83 @@
+Primary Paste                            : Control+V, Shift+Insert
+Secondary Paste                          : Control+v, Insert
+Secondary Copy                           : Control+c
+Clear Line                               : Control+w
+Move to Front of Line                    : Control+a
+Move to End of Line                      : Control+e
+Move Word Backward                       : Alt+b, Control+Left
+Move Word Forward                        : Alt+f, Control+Right
+Move Character Backward                  : Left, Control+b
+Move Character Forward                   : Right, Control+f
+Remove Word Backward                     : Control+Alt+h, Control+BackSpace
+Remove Word Forward                      : Control+Alt+d
+Remove Character Forward                 : Delete, Control+d
+Remove Character Backward                : BackSpace, Shift+BackSpace, Control+h
+Remove to End of Line                    : Control+k
+Remove to Start of Line                  : Control+u
+Accept Entry                             : Control+j, Control+m, Return, KP_Enter
+Accept Custom Entry                      : Control+Return
+Accept Custom Entry (Alternative)        : Control+Shift+Return
+Accept Entry (Alternative)               : Shift+Return
+Delete Entry                             : Shift+Delete
+Next Mode                                : Shift+Right, Control+Tab
+Previous Mode                            : Shift+Left, Control+ISO_Left_Tab
+Complete Mode                            : Control+l
+Row Left                                 : Control+Page_Up
+Row Right                                : Control+Page_Down
+Row Up                                   : Up, Control+p
+Row Down                                 : Down, Control+n
+Next Element                             : Tab
+Previous Element                         : ISO_Left_Tab
+Page Previous                            : Page_Up
+Page Next                                : Page_Down
+First Row                                : Home, KP_Home
+Last Row                                 : End, KP_End
+Select Row                               : Control+space
+Screenshot                               : Alt+S
+Ellipsize                                : Alt+period
+Toggle Case Sensitivity                  : grave, dead_grave
+Toggle Sort                              : Alt+grave
+Cancel                                   : Escape, Control+g, Control+bracketleft
+Custom Action 1                          : Alt+1
+Custom Action 2                          : Alt+2
+Custom Action 3                          : Alt+3
+Custom Action 4                          : Alt+4
+Custom Action 5                          : Alt+5
+Custom Action 6                          : Alt+6
+Custom Action 7                          : Alt+7
+Custom Action 8                          : Alt+8
+Custom Action 9                          : Alt+9
+Custom Action 10                         : Alt+0
+Custom Action 11                         : Alt+exclam
+Custom Action 12                         : Alt+at
+Custom Action 13                         : Alt+numbersign
+Custom Action 14                         : Alt+dollar
+Custom Action 15                         : Alt+percent
+Custom Action 16                         : Alt+dead_circumflex
+Custom Action 17                         : Alt+ampersand
+Custom Action 18                         : Alt+asterisk
+Custom Action 19                         : Alt+parenleft
+Select Option 1                          : Super+1
+Select Option 2                          : Super+2
+Select Option 3                          : Super+3
+Select Option 4                          : Super+4
+Select Option 5                          : Super+5
+Select Option 6                          : Super+6
+Select Option 7                          : Super+7
+Select Option 8                          : Super+8
+Select Option 9                          : Super+9
+Select Option 10                         : Super+0
+Entry History Up                         : Control+Up
+Entry History Down                       : Control+Down
+Matcher Up                               : Super+equal
+Matcher Down                             : Super+minus
+Mouse Left Row Scroll                    : ScrollLeft
+Mouse Right Row Scroll                   : ScrollRight
+Mouse Up Row Scroll                      : ScrollUp
+Mouse Down Row Scroll                    : ScrollDown
+Select Entry (Mouse)                     : MousePrimary
+Accept Entry (Mouse Double Click)        : MouseDPrimary
+Accept Custom Entry (Mouse Double Click) : Control+MouseDPrimary
+Change Wallapaper                        : Super + I
+Select A wallpaper to Change             : Super + Shift + I 
+Close Waybar                             : Super + W

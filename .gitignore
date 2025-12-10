@@ -1,0 +1,5 @@
+# Ignore these configs
+vscode/
+gtk-3.0/
+qt5ct/
+*.log
