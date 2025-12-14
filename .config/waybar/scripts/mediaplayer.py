@@ -113,7 +113,7 @@ class PlayerManager:
         player_name = player.props.player_name
         artist = player.get_artist()
         title = player.get_title()
-        title = title.replace("&", "&amp;")
+        # title = title.replace("&", "&amp;")
 
         track_info = ""
         if player_name == "spotify" and "mpris:trackid" in metadata.keys() and ":ad:" in player.props.metadata["mpris:trackid"]:
@@ -125,9 +125,9 @@ class PlayerManager:
 
         if track_info:
             if player.props.status == "Playing":
-                track_info = " " + track_info
+                track_info = "" + "  " + track_info
             else:
-                track_info = " " + track_info
+                track_info = "" + "  " +track_info
         # only print output if no other player is playing
         current_playing = self.get_first_playing_player()
         if current_playing is None or current_playing.props.player_name == player.props.player_name:

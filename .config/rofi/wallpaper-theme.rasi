@@ -1,9 +1,9 @@
 window {
-    background-image: url("/home/orion_siva/Pictures/wallpaper/chess1.png");
+    background-image: url("/home/orion_siva/Pictures/wallpaper/chess2.png");
 }
 *{
-    textcolor: black;
-    inputback: white/30%;
-    listback: white/30%;
+    textcolor: white;
+    inputback: black/30%;
+    listback: transparent;
     select: black/30%;
 }

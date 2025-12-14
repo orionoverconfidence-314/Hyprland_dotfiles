@@ -1,0 +1,13 @@
+/*Bluetooth*/
+#bluetooth {
+    padding: 0px 5px;
+}
+
+#bluetooth.connected {
+    padding: 0 15px;
+}
+
+/* Network */
+#network.disconnected {
+    background-color: #f53c3c;
+}

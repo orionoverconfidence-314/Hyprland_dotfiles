@@ -1,0 +1,63 @@
+{ // Left group: options 
+    "group/options": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 200,
+            "children-class": "not-power",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/options-wrap",
+            "backlight",
+            "keyboard-state",
+            "idle_inhibitor",
+            "power-profiles-daemon",
+            "bluetooth"
+        ]
+    },
+    "custom/options-wrap": {
+        "format": "",
+        "tooltip": false
+    },
+    // Right group: apps
+    "group/right_options": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 200,
+            "children-class": "not-power",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/right_options_wrap",
+            "pulseaudio",
+            "network",
+            "custom/pacman",
+            "custom/help"
+        ]
+    },
+    "custom/right_options_wrap": {
+        "format": "",
+        "tooltip": false
+    },
+    // Status
+    "group/status": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 200,
+            "children-class": "not-power",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/status_wrap",
+            "cpu",
+            "memory",
+            "disk",
+            "temperature"
+        ]
+    },
+    
+    "custom/status_wrap": {
+        "format": "",
+        "tooltip": false
+    }
+}

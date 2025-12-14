@@ -1,0 +1,98 @@
+/* ---------------------------------------------------------------------------------
+   GLOBAL STYLES
+--------------------------------------------------------------------------------- */
+* {
+  border: none;
+  border-radius: 20px;
+
+  font-family: "Adwaita Sans", "Font Awesome 7 Brands", "NotoSans Nerd Font Propo", "Noto Sans", "Obsidian", "SublimeText";
+  font-size: 13px;
+}
+
+/* Waybar container */
+#waybar {
+  transition: opacity 0s ease, transform 0s ease;
+}
+
+/* Waybar window */
+window#waybar {
+  background-color: transparent;
+  transition: opacity 0s ease-in;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* Transparent backgrounds for specific apps */
+window#waybar.termite,
+window#waybar.chromium {
+  background-color: transparent;
+}
+
+/* Buttons */
+button {
+  box-shadow: inset 0 -3px transparent;
+
+}
+
+button:hover {
+  background: inherit;
+}
+
+/* ---------------------------------------------------------------------------------
+   LEFT SECTION MODULES
+   (clock, backlight, media, keyboard, bluetooth, apps, scratchpad)
+--------------------------------------------------------------------------------- */
+#clock,
+#backlight,
+#custom-media,
+#keyboard-state,
+#bluetooth,
+#custom-options-wrap,
+#custom-brave,
+#custom-kitty,
+#custom-vscode,
+#image-sublime_text,
+#custom-sublime_text,
+#custom-obsidian,
+#custom-quick_apps-wrap,
+#quick_apps {
+  color: @color_list_left;
+  background-color: @color_list_left_back;
+  border: solid 2px;
+  border-color: @list_border_left;
+  padding: 0px 15px;
+  min-width: 25px;
+  margin: 0 3px;
+}
+
+/* ---------------------------------------------------------------------------------
+   RIGHT SECTION MODULES
+   (audio, network, battery, power, notifications, pacman)
+--------------------------------------------------------------------------------- */
+#pulseaudio,
+#custom-status,
+#custom-status_wrap,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#custom-pacman.pending-updates,
+#custom-pacman.updated,
+#taskbar,
+#battery,
+#custom-help,
+#custom-notification,
+#custom-right_options_wrap,
+#custom-right_options,
+#custom-power,
+#network {
+  color: @color_list_right;
+  background-color: @color_list_right_back;
+  border: solid 2px;
+  border-color: @list_border_right;
+  padding: 0px 15px;
+  min-width: 25px;
+  margin: 0 3px;
+}

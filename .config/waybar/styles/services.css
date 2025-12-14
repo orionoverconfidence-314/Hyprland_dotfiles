@@ -1,0 +1,37 @@
+/* ---------------------------------------------------------------------------------
+   PACMAN
+--------------------------------------------------------------------------------- */
+
+#custom-pacman.pending-updates {
+  animation: blink-update 2s infinite alternate;
+  padding: 0 10px;
+  min-width: 0;
+}
+
+#custom-pacman.updated {
+  padding: 0 10px;
+  min-width: 0;
+}
+
+/* ---------------------------------------------------------------------------------
+   HELP / POWER BUTTONS
+--------------------------------------------------------------------------------- */
+
+#custom-power {
+  padding: 0 1px 0 0;
+}
+
+#custom-help {
+  padding: 0 5px;
+}
+
+/* ---------------------------------------------------------------------------------
+   NOTIFICATIONS
+--------------------------------------------------------------------------------- */
+#custom-notification {
+  padding: 0 10px;
+}
+
+/* #taskbar { padding: 0; }
+#taskbar button.active { background-color: @color_list_right; }
+#taskbar button:hover { background-color: @workspaces_buton_hover_back; } */

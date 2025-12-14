@@ -1,0 +1,163 @@
+/* ---------------------------------------------------------------------------------
+   WORKSPACES
+--------------------------------------------------------------------------------- */
+#workspaces {
+  background: @workspaces;
+  margin: 0 5px;
+  padding: 0;
+  border: solid 0px #000000;
+}
+
+#workspaces button {
+  padding: 0 15px;
+  color: @workspaces_button;
+  background: @workspaces_button_back;
+  margin: 3px;
+}
+
+#workspaces button.active {
+  transition: all 0.3s ease-in-out;
+  padding: 0 25px;
+  margin: 3px;
+  font-weight: bolder;
+}
+
+#workspaces button:hover {
+  background-color: @workspaces_buton_hover_back;
+  transition: background-color 0.25s ease, color 0.25s ease, padding 0.2s ease;
+
+  color: @workspaces_buton_hover;
+  padding: 0 20px;
+}
+
+/* Remove extra margin if leftmost/rightmost module */
+.modules-left>widget:first-child>#workspaces {
+  margin-left: 0;
+}
+
+.modules-right>widget:last-child>#workspaces {
+  margin-right: 0;
+}
+
+/* Keyboard State */
+#keyboard-state {
+  padding: 0px 0px 0px 0px;
+}
+
+#keyboard-state>label {
+  padding: 0 5px;
+}
+
+#keyboard-state>label.locked {
+  background: @keyboard_locked;
+  padding: 0 10px;
+}
+
+/* Clock */
+#clock {
+  padding: 0px 10px 0px 15px;
+}
+
+/* Battery */
+#battery {
+  padding: 0 15px;
+
+  margin-right: 5px;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: #000000;
+  border-color: #27eb00;
+  background-color: #27eb00;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    border-color: white;
+    color: #000000;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  border-color: red;
+  animation: blink 0.5s steps(12) infinite alternate;
+}
+
+/*Idle Inhibitor*/
+#idle_inhibitor {
+  background-color: #2d3436;
+  padding: 0 10px;
+  color: #ffffff;
+}
+
+#idle_inhibitor.activated {
+  background-color: #73949c;
+  color: #2d3436;
+}
+
+/* Power profiles */
+#power-profiles-daemon {
+  padding: 0 14px;
+  color: #ffffff;
+}
+
+#power-profiles-daemon.performance {
+  background-color: #f53c3c;
+}
+
+#power-profiles-daemon.balanced {
+  background-color: #2980b9;
+}
+
+#power-profiles-daemon.power-saver {
+  background-color: #2ecc71;
+  color: #000000;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+  padding: 0 10px;
+}
+
+#pulseaudio.muted {
+  background-color: #ff0000;
+  color: #000000;
+  border-color: red;
+}
+
+/* ---------------------------------------------------------------------------------
+   (CPU, MEM, Disk, Temp)
+--------------------------------------------------------------------------------- */
+
+#cpu,
+#memory,
+#disk,
+#temperature {
+  padding: 0px 10px 0px 10px;
+}
+
+#memory.warning {
+  color: yellow;
+}
+
+#memory.critical {
+  color: red;
+  font-weight: bold;
+}
+
+#disk.warning {
+  color: yellow;
+}
+
+#disk.critical {
+  color: red;
+  font-weight: bold;
+}
+
+#temperature.critical {
+  background-color: #eb4d4b;
+}

@@ -1,0 +1,48 @@
+{ // Left group: apps
+    "group/quick_apps": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 200,
+            "children-class": "not-power",
+            "transition-left-to-right": true
+        },
+        "modules": [
+            "custom/quick_apps_wrap",
+            "custom/brave",
+            "custom/kitty",
+            "custom/vscode",
+            "custom/obsidian",
+            "custom/sublime_text"
+        ]
+    },
+    "custom/quick_apps_wrap": {
+        "format": "",
+        "tooltip": false
+    },
+    // Custom apps
+    "custom/brave": {
+        "format": "",
+        "tooltip-format": "Brave",
+        "on-click": "brave"
+    },
+    "custom/kitty": {
+        "format": "",
+        "tooltip-format": "Kitty",
+        "on-click": "kitty"
+    },
+    "custom/vscode": {
+        "format": "",
+        "tooltip-format": "VS Code",
+        "on-click": "code"
+    },
+    "custom/obsidian": {
+        "format": "",
+        "tooltip-format": "Obsidian",
+        "on-click": "flatpak run md.obsidian.Obsidian"
+    },
+    "custom/sublime_text": {
+        "format": "",
+        "tooltip-format": "Sublime Text",
+        "on-click": "subl"
+    }
+}

@@ -1,0 +1,21 @@
+/*Apps (Brave, vscode, Sublime Text, Obsidian, Kitty)*/
+
+#custom-quick_apps_wrap {
+  padding: 0px 8px;
+  min-width: 25px;
+}
+
+#quick_apps {
+  padding: 0;
+  min-width: 25px;
+}
+/* Apps icons */
+#custom-quick_apps_wrap,
+#custom-obsidian,
+#custom-vscode,
+#custom-kitty,
+#custom-sublime_text,
+#custom-brave {
+  border-color: @color_list_left_back;
+  padding: 0 3px;
+}
