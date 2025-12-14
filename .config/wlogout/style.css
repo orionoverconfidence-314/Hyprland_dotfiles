@@ -24,6 +24,8 @@ button {
 
     min-width: 100px;   /* width of each button */
     min-height: 100px;  /* height of each button */
+    margin-bottom: 150px;
+    margin-top: 150px;
     padding: 10px;      /* inner spacing between icon & border */
 
 }
