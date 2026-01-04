@@ -1,5 +1,0 @@
-# keybinds.csv
-Lock Screen,hyprctl dispatch lock
-Screenshot,grim -g "$(slurp)" ~/Pictures/screenshot.png
-Terminal,hyprctl dispatch exec alacritty
-File Manager,hyprctl dispatch exec thunar
