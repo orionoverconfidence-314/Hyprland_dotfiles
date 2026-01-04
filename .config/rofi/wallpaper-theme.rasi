@@ -1,0 +1,9 @@
+window {
+    background-image: url("/home/orion_siva/Pictures/wallpaper/spider2.png");
+}
+*{
+    textcolor: white;
+    inputback: black/30%;
+    listback: transparent;
+    select: black/30%;
+}

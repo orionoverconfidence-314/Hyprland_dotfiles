@@ -1,0 +1,185 @@
+/*** Widgets ***/
+.widget {
+  margin: 8px;
+  padding: 8px;
+  border-radius: var(--border-radius);
+}
+
+/* Title widget */
+.widget-title {
+  padding: 0;
+}
+
+.widget-title>label {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+
+.widget-title>button {
+  margin-left: 8px;
+  border-radius: var(--border-radius);
+}
+
+/* DND widget */
+.wdiget-dnd {
+  padding: 0;
+}
+
+.widget-dnd label {
+  color: var(--text-color);
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.widget-dnd switch {
+  border-radius: var(--border-radius);
+  margin-left: 8px;
+}
+
+.widget-dnd switch slider {
+  border-radius: var(--border-radius);
+}
+
+/* Label widget */
+.widget-label>label {
+  font-size: 1.1rem;
+}
+
+
+
+
+/* Menubar widget */
+/* ─── Menubar Buttons ───────────────────────────────────────── */
+
+.widget-menubar {
+  padding: 0px;
+}
+
+
+
+.widget-menubar button {
+  background: transparent;
+  /* outer button bg */
+  padding: 5px 12px 5px 10px;
+  border-radius: 100px;
+}
+
+/* Hover affect on the outer button */
+.widget-menubar button:hover {
+  background: #444;
+  border-color: var(--accent-color);
+  border-radius: 100px;
+}
+
+
+/* Specific class for your Power buttons */
+.power-buttons>button {
+  background: #2f2f3f;
+  /* Custom color for power */
+  color: #ff6b6b;
+}
+
+/* Hover for Power buttons */
+.power-buttons>button:hover {
+  background: #4a4a60;
+  color: #ff8787;
+}
+
+/* Specific class for powermode */
+.powermode-buttons>button {
+  background: #2f3f2f;
+  /* Different tint */
+  color: #8aff8a;
+
+}
+
+/* Hover for powermode */
+.powermode-buttons>button:hover {
+  background: #3f5f3f;
+  color: #caffc8;
+}
+
+
+.widget-menubar>.menu-button-bar {
+  /* The left button container */
+  /* The right button container */
+  /* The left and right button container */
+}
+
+/* 
+.widget-menubar>.menu-button-bar>.start {
+  margin-left: 8px;
+}
+
+.widget-menubar>.menu-button-bar>.end {
+  margin-right: 8px;
+}
+
+.widget-menubar>.menu-button-bar>.widget-menubar-container button {
+  border-radius: var(--border-radius);
+  margin: 0 4px;
+}
+
+.widget-menubar>revealer * {
+  margin-top: 8px;
+}
+
+.widget-menubar>revealer * button {
+  border-radius: var(--border-radius);
+  margin: 8px;
+  margin-top: 0;
+}
+
+.widget-menubar>revealer * button:last-child {
+  margin-bottom: 0;
+} */
+
+/* Volume widget */
+:root {
+  --widget-volume-row-icon-size: 24px;
+}
+
+.widget-volume {
+  padding: 0px;
+}
+
+/* Each row app icon */
+.widget-volume row image {
+  -gtk-icon-size: var(--widget-volume-row-icon-size);
+}
+
+.per-app-volume {
+  background-color: var(--noti-bg-alt);
+  margin: 0px;
+  margin-bottom: 0;
+  border-radius: var(--border-radius);
+}
+
+/* Slider widget */
+
+.widget-slider {
+  padding: 0;
+
+}
+
+.widget-slider label {
+  font-size: inherit;
+
+}
+
+/* Backlight widget */
+.widget-backlight {
+  padding: 0;
+
+}
+
+/* Inhibitors widget */
+.widget-inhibitors>label {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+
+.widget-inhibitors>button {
+  margin-left: 8px;
+  border-radius: var(--border-radius);
+}

@@ -1,0 +1,76 @@
+/* Mpris widget */
+:root {
+  --mpris-album-art-overlay: rgba(0, 0, 0, 0.55);
+  --mpris-button-hover: rgba(0, 0, 0, 0.5);
+  --mpris-album-art-icon-size: 60px;
+  --mpris-album-art-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+}
+
+.widget-mpris {
+  padding: 0;
+
+  /* The parent to all players */
+}
+
+
+
+.widget-mpris .widget-mpris-player {
+  margin: 16px 0px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--mpris-album-art-shadow);
+}
+
+.widget-mpris .widget-mpris-player .mpris-background {
+  filter: blur(10px);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay {
+  padding: 16px;
+  background-color: var(--mpris-album-art-overlay);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay button:hover {
+  /* The media player buttons (play, pause, next, etc...) */
+  background: var(--noti-bg-hover);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-album-art {
+  border-radius: var(--border-radius);
+  box-shadow: var(--mpris-album-art-shadow);
+  -gtk-icon-size: var(--mpris-album-art-icon-size);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-title {
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-subtitle {
+  font-size: 1.0rem;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay>box>button {
+  /* Change player control buttons */
+  padding: 0px 0px 0px 0px;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay>box>button:hover {
+  background-color: var(--mpris-button-hover);
+  padding: 0px 0px 0px 0px;
+
+}
+
+
+
+.widget-mpris>box>button:disabled,
+/* Change player side buttons insensitive */
+.widget-mpris>box>button {
+  /* Change player side buttons */
+  /*somehow got rid of the carousel button i do not know how, chatgpt didnt
+   even know what to do and i did something and got the answer*/
+  min-width: 0;
+  padding: 0;
+  -gtk-icon-size: 0;
+
+
+}

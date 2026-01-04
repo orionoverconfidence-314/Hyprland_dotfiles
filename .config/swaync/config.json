@@ -1,0 +1,230 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "ignore-gtk-theme": true,
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+  "control-center-layer": "top",
+  "layer-shell": true,
+  "layer-shell-cover-screen": true,
+  "cssPriority": "user",
+  "control-center-margin-top": 5,
+  "control-center-margin-bottom": 5,
+  "control-center-margin-right": 5,
+  "control-center-margin-left": 5,
+  "notification-2fa-action": true,
+  "notification-inline-replies": false,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "timeout": 10,
+  "timeout-low": 5,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
+  "relative-timestamps": true,
+  "control-center-width": 340,
+  "control-center-height": -1,
+  "notification-window-width": 400,
+  "keyboard-shortcuts": true,
+  "notification-grouping": false,
+  "image-visibility": "when-available",
+  "transition-time": 200,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "text-empty": "No Notifications",
+  "script-fail-notify": true,
+  "scripts": {
+    "example-script": {
+      "exec": "echo 'Do something...'",
+      "urgency": "Normal"
+    },
+    "example-action-script": {
+      "exec": "echo 'Do something actionable!'",
+      "urgency": "Normal",
+      "run-on": "action"
+    }
+  },
+  "notification-visibility": {
+    "example-name": {
+      "state": "muted",
+      "urgency": "Low",
+      "app-name": "Spotify"
+    }
+  },
+  "widgets": [
+    "menubar",
+    "buttons-grid",
+    "volume",
+    "slider",
+    "backlight",
+    "mpris",
+    "dnd",
+    "title",
+    "notifications"
+  ],
+
+  "widget-config": {
+    "notifications": {
+      "vexpand": true
+    },
+    "inhibitors": {
+      "text": "Inhibitors",
+      "button-text": "Clear All",
+      "clear-all-button": true
+    },
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "label": {
+      "max-lines": 5,
+      "text": "Label Text"
+    },
+    "mpris": {
+      "blacklist": [],
+      "autohide":false ,
+      "show-album-art": "always",
+      "loop-carousel": true
+    },
+    "volume": {
+      "label": "󰕾",
+      "show-per-app-icon": true,
+      "show-per-app": true
+    },
+    "backlight": {
+      "label": "󰃠",
+      "device": "intel_backlight",
+      "subsystem": "backlight",
+      "min": 5
+    },
+
+    "menubar": {
+      "menu#power-buttons": {
+        "label": "",
+        "position": "right",
+        "actions": [
+          {
+            "label": "  Reboot",
+            "command": "systemctl reboot"
+          },
+          {
+            "label": "  Lock",
+            "command": "swaylock -f --image ~/.config/wallpapers/snow_woods.jpg"
+          },
+          {
+            "label": "  Logout",
+            "command": "swaymsg exit"
+          },
+          {
+            "label": "  Shut down",
+            "command": "systemctl poweroff"
+          }
+        ]
+      },
+      "menu#powermode-buttons": {
+        "label": "󰓅",
+        "position": "left",
+        "actions": [
+          {
+            "label": "Performance",
+            "command": "powerprofilesctl set performance"
+          },
+          {
+            "label": "Balanced",
+            "command": "powerprofilesctl set balanced"
+          },
+          {
+            "label": "Power-saver",
+            "command": "powerprofilesctl set power-saver"
+          }
+        ]
+      }
+    },
+
+    "slider": {
+      "label": "",
+      "cmd_setter": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ $value%",
+      "cmd_getter": "echo $(wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | sed -n 's/Volume: //p' | awk '{print int($1 * 100)}')",
+      "min": 0,
+      "max": 100,
+      "min_limit": 0,
+      "max_limit": 100,
+      "value_scale": 0
+    },
+    "buttons-grid": {
+      "buttons-per-row": 4,
+      "actions": [
+        {
+          "label": "󰤥",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
+          "update-command": "sh -c '[[ $(nmcli radio wifi) == \"enabled\" ]] && echo true || echo false'"
+        },
+        {
+          "label": "󰂯",
+          "type": "toggle",
+          "active": true,
+          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && bluetoothctl power on || bluetoothctl power off'",
+          "update-command": "bluetoothctl show | grep -q 'Powered: yes' && echo true || echo false"
+        },
+        {
+          "label": " ",
+          "type": "toggle",
+          "command": "if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then hyprctl dispatch exec 'hyprsunset --temperature 1000'; else pkill -INT hyprsunset; fi",
+          "update-command": "pgrep -x hyprsunset >/dev/null && echo true || echo false"
+        },
+
+        {
+          "label": "",
+          "type": "toggle",
+          "active": true,
+          "command": "need update command"
+        },
+        {
+          "label": " ",
+          "type": "toggle",
+          "active": false,
+          "command": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+          "update-command": "bash -c 'wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | grep -q \"\\[MUTED\\]\" && echo \"true\" || echo \"false\"'"
+        },
+        {
+          "label": "",
+          "type": "normal",
+          "command": "snapshot"
+        },
+        {
+          "label": "󰹑",
+          "type": "normal",
+          "command": "$HOME/.config/rofi/scripts/screenshot.sh"
+        },
+
+        {
+          "label": "󰖔",
+          "type": "toggle",
+          "active": false,
+          "command": "need update command"
+        },
+
+        {
+          "label": "󱗼",
+          "type": "normal",
+          "command": "$HOME/.config/rofi/scripts/apps.sh"
+        },
+        {
+          "label": " ",
+          "type": "normal",
+          "command": "$HOME/.config/rofi/scripts/quicklinks.sh"
+        },
+        {
+          "label": "",
+          "type": "normal",
+          "command": "foot -e nvim ~/.config/hypr/keybindings.txt"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import url("styles/variables.css");
+@import url("styles/base.css");
+@import url("styles/notifications.css");
+@import url("styles/control-center.css");
+@import url("styles/widgets.css");
+@import url("styles/mpris.css");
+@import url("styles/buttons-grid.css");
+@import url("styles/theme.css");
+
+/*IMPORTANT:- swaync uses this AdwStyleManager:color-scheme, if you change only a 
+warning will come (ts fine)*/

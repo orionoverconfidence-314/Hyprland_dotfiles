@@ -1,0 +1,167 @@
+{
+    // Hyprland workspaces module
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}"
+    },
+    // Keyboard state module
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    // Clock module
+    "clock": {
+        "format": "{:%H:%M} <span size='larger'></span> ",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%d-%B-%Y}"
+    },
+    // Backlight module
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "tooltip-format": "Brightness: {percent}% ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    // Battery module
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% <span size='larger'>{icon}</span>",
+        "format-full": "{capacity}% <span size='larger'>{icon}</span>",
+        "format-charging": "{capacity}% <span size='larger'></span>",
+        "format-plugged": "{capacity}% <span size='larger'></span>",
+        "format-alt": "{time} <span size='larger'>{icon}</span>",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    // Idle inhibitor module
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "tooltip": true,
+        "format-icons": {
+            "activated": "☀️",
+            "deactivated": "🌙"
+        },
+        "tooltip-format-activated": "Idle inhibitor: ON",
+        "tooltip-format-deactivated": "Idle inhibitor: OFF"
+    },
+    // Power profiles module
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+    // PulseAudio module
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    // CPU
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": true,
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}"
+    },
+    // Memory
+    "memory": {
+        "interval": 5,
+        "format": "{used} / {total} GB ", // only percentage works on 0.14
+        "tooltip-format": "Used: {used} GB\nTotal: {total} GB\nPercentage: {percentage}%",
+        "states": {
+            "warning": 60,
+            "critical": 80
+        },
+        "on-click": "foot -e htop",
+        "on-click-right": "notify-send 'Freeing Cache'; sync; echo 3 | sudo tee /proc/sys/vm/drop_caches"
+    },
+    // Disk
+    "disk": {
+        "interval": 10,
+        "path": "/",
+        "format": "{used} / {total}  ({percentage_used}%) ",
+        "format-alt": "Free: {free} GB ",
+        "format-alt-click": "right",
+        "tooltip-format": "Disk ({path})\nUsed: {used} GB\nFree: {free} GB\nTotal: {total} GB\nUsage: {percentage_used}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    // Temperature
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    }
+    // "wlr/taskbar": {
+    //     "format": "{icon}",
+    //     "icon-size": 14,
+    //     "icon-theme": "Numix-Circle",
+    //     "tooltip-format": "{title}",
+    //     "ignore-list": [
+    //         "Alacritty"
+    //     ],
+    //     "app_ids-mapping": {
+    //         "firefoxdeveloperedition": "firefox-developer-edition"
+    //     },
+    //     "rewrite": {
+    //         "Firefox Web Browser": "Firefox"
+    //     },
+    //     "update-interval": 500,
+    //     "tooltip-delay": 100
+    // }
+}

@@ -1,0 +1,28 @@
+{
+    // --------------------
+    // General Bar Settings
+    // --------------------
+    "height": 29,
+    "spacing": 4,
+    "margin-top":5,
+    "width":0,
+    // --------------------
+    // Module Groups
+    // --------------------
+    "modules-left": [
+        "group/options",
+        "custom/media",
+        "clock",
+        "group/quick_apps"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        // "wlr/taskbar",
+        "custom/notification",
+        "group/status",
+        "group/right_options",
+        "battery"
+    ]
+}
